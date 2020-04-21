@@ -1,0 +1,130 @@
+.projectwrapper{
+margin-top: 40px;
+margin-bottom: 40px;
+width: 100%;
+height: 200px;
+background-color: whitesmoke;
+z-index: 5;
+}
+.buttonLink{
+width: 80px;
+height: 40px;
+background-color: rgb(96, 96, 235);
+color: white;
+text-decoration: none;
+cursor: pointer;
+margin-left: 50vw;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+border-radius: 2px;
+}
+.buttonLink:nth-child(2){
+margin-left: 10px;
+}
+a{
+width: 100%;
+height: 100%;
+color: white;
+text-decoration: none;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 15px;
+}
+.projectId{
+width: 10px;
+height: 10px;
+padding: 5vh 0 0 5vw;
+font-size: 1.2em;
+transition: 0.3s;
+}
+.projectId::before{
+content: "";
+width:20px;
+height: 1px;
+display: block;
+position: absolute;
+background-color: black;
+float: left;
+margin: 10px 0 0 -28px;
+}
+.projectName{
+height: 50px;
+font-size: 1.2em;
+font-family: 'Montserrat', sans-serif;
+padding: 5vh 0 0 10vw;
+margin-right: 20vw; 
+}
+.description{
+font-size: 0.6em;
+padding-top: 2vh;
+width: 50%;
+}
+@media(min-width:640px) and (orientation: landscape){
+.buttonLink{
+margin-left: 60vw;
+}
+.buttonLink:nth-child(2){
+margin-left: 8vw;
+}
+}
+@media(min-width: 1024px){
+.projectwrapper{
+margin-top: 40px;
+margin-bottom: 40px;
+width: 100%;
+height: 200px;
+background-color: whitesmoke;
+z-index: 5;
+}
+.buttonLink{
+width: 100px;
+height: 50px;
+background-color: rgb(96, 96, 235);
+color: white;
+text-decoration: none;
+cursor: pointer;
+margin-left: 600px;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+}
+.buttonLink:nth-child(2){
+margin-left: 100px;
+}
+a{
+width: 100%;
+height: 100%;
+color: white;
+text-decoration: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.projectId{
+width: 10px;
+height: 10px;
+padding: 30px 0 0 30px;
+font-size: 20px;
+transition: 0.3s;
+}
+.projectId::before{
+content: "";
+width:20px;
+height: 1px;
+display: block;
+position: absolute;
+background-color: black;
+float: left;
+margin: 10px 0 0 -28px;
+}
+.projectName{
+width: 500px;
+height: 50px;
+font-size: 1.85em;
+font-family: 'Montserrat', sans-serif;
+padding: 20px 0 0 80px; 
+}
+.description{
+font-size: 0.5em;
+padding-top: 2vh;
+}
+}

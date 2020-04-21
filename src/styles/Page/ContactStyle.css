@@ -1,0 +1,110 @@
+.contactForm{
+width: 270px;
+height: 330px;
+display: block;
+margin: 50px auto 0 auto;
+}
+input, textarea{
+width: 100%;
+height: 36px;
+border: 1px solid black;
+display: block;
+margin: 10px auto 0 auto;
+padding: 10px;
+border: 1px solid rgb(96, 96, 235);
+border-radius: 2px;
+font-size: 10px;
+position: relative;
+font-family: 'Montserrat', sans-serif;
+}
+input:hover, textarea:hover{
+border: 2px solid rgb(96, 96, 235);
+}
+input:focus, textarea:focus{
+border: 2px solid rgb(96, 96, 235);
+outline: none;
+background-color: #efefff;
+}
+textarea{
+height: 130px;
+}
+button{
+display: block;
+width: 120px;
+height: 35px;
+margin: 10px auto 20px auto;
+border: 2px solid rgb(96, 96, 235);
+background-color:rgb(96, 96, 235) ;
+color: white;
+font-size: 13px;
+text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+border-radius: 2px;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+cursor: pointer;
+}
+.ErrorToUser{
+margin: 3px 0 3px 0;
+font-size: 10px;
+color: red;
+}
+.MessageToUser{
+margin: 3px 0 3px 0;
+font-size: 10px;
+color: green;
+}
+@media(min-width:1024px){
+.contactForm{
+width: 400px;
+height: 500px;
+margin: 70px auto 0px auto;
+padding: 0 auto 0 auto;
+display: block;
+}
+input, textarea{
+display: block;
+width: 400px;
+height: 50px;
+margin: 15px auto 15px auto;
+padding: 10px;
+border: 1px solid rgb(96, 96, 235);
+border-radius: 2px;
+font-size: 16px;
+position: relative;
+font-family: 'Montserrat', sans-serif;
+}    
+input:hover, textarea:hover{
+border: 2px solid rgb(96, 96, 235);
+}
+input:focus, textarea:focus{
+border: 2px solid rgb(96, 96, 235);
+outline: none;
+background-color: #efefff;
+}
+textarea{
+height: 200px;
+}
+button{
+display: block;
+width: 200px;
+height: 50px;
+margin: 20px auto 0 auto;
+border: 2px solid rgb(96, 96, 235);
+background-color:rgb(96, 96, 235) ;
+color: white;
+font-size: 17px;
+text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+border-radius: 2px;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+cursor: pointer;
+}
+.ErrorToUser{
+margin: 3px 0 3px 0;
+font-size: 11px;
+color: red;
+}
+.MessageToUser{
+margin: 3px 0 3px 0;
+font-size: 11px;
+color: green;
+}
+}
