@@ -27,6 +27,7 @@ background-color: #efefff;
 }
 textarea{
 height: 130px;
+resize: none;
 }
 button{
 display: block;

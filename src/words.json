@@ -26,7 +26,9 @@
         "ERROR_EMAIL": "Twój email musi posiadać znak @",
         "NO_ERROR_EMAIL": "Pole wypełnione poprawnie",
         "ERROR_MESSAGE": "Wiadomość musi zawierać od 10 do 200 znaków",
-        "NO_ERROR_MESSAGE": "Pole wypełnione poprawnie"
+        "NO_ERROR_MESSAGE": "Pole wypełnione poprawnie",
+        "MESSAGE_SEND_SUCCESFUL": "Wiadomość została wysłana",
+        "CLOSE": "ZAMKNIJ"
     },
     "ENGLISH": {
         "LANGUAGE": "ENGLISH",
@@ -55,6 +57,8 @@
         "ERROR_EMAIL": "Your message should have @",
         "NO_ERROR_EMAIL": "Field completed correctly",
         "ERROR_MESSAGE": "Your message should consist between 10 and 200 characters",
-        "NO_ERROR_MESSAGE": "Field completed correctly"
+        "NO_ERROR_MESSAGE": "Field completed correctly",
+        "MESSAGE_SEND_SUCCESFUL": "Message was sent",
+        "CLOSE": "CLOSE"
     }
 }

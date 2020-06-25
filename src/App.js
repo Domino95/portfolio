@@ -10,6 +10,7 @@ import {
   technologiesAnimation, projectsTitleAnimation,
   technologyTitleAnimation, contactTitleAnimation, setAll
 } from "./animations/animations"
+
 function App() {
   const [scroll, setscroll] = useState(undefined);
   useEffect(() => {

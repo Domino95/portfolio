@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import "../../styles/App.css"
 import "../../styles/Page/ContactStyle.css"
 import { useSelector } from "react-redux"
+import ModalSendSuccesful from './ModalSendSuccesful';
 
 const Contact = () => {
     const words = useSelector(state => state.selectLanguage)
+    const [modal, setmodal] = useState(false)
     const [name, setname] = useState("")
     const [email, setemail] = useState("")
     const [message, setmessage] = useState("")
@@ -13,13 +15,32 @@ const Contact = () => {
     const [errorMessage, setErrorMessage] = useState("")
     const [validation, setvalidation] = useState({ name: false, email: false, message: false })
 
+
+
+    const handleModal = () => {
+        setmodal(false)
+    }
+
     const onSubmit = (e) => {
         e.preventDefault()
+
         if (validation.name === true && validation.email === true && validation.message === true) {
-            alert("WYSLANO! XD")
+            setmodal(true)
+            const templateId = 'template_NSprmb0r';
+            sendFeedback(templateId, { message_html: message, from_name: name, reply_to: email })
             resetForm()
         }
     }
+
+    const sendFeedback = (templateId, variables) => {
+        window.emailjs.send(
+            'gmail', templateId,
+            variables
+        ).then(res => {
+        })
+            .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+    }
+
     const resetForm = () => {
         setname("")
         setErrorName(null)
@@ -91,6 +112,7 @@ const Contact = () => {
     }
     return (
         <>
+            {modal ? <ModalSendSuccesful handleModal={handleModal} /> : null}
             <div className="titlewrapper" id="contact">
                 <div className="letterColor" >{words.CONTACT_LETTER}</div> {words.CONTACT_TITLE}
             </div>
