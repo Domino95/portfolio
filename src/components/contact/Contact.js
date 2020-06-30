@@ -26,9 +26,9 @@ const Contact = () => {
 
         if (validation.name === true && validation.email === true && validation.message === true) {
             setmodal(true)
+            resetForm()
             const templateId = 'template_NSprmb0r';
             sendFeedback(templateId, { message_html: message, from_name: name, reply_to: email })
-            resetForm()
         }
     }
 
@@ -48,6 +48,7 @@ const Contact = () => {
         setErrorEmail(null)
         setmessage("")
         setErrorMessage(null)
+        setvalidation({ name: false, email: false, message: false })
     }
 
 
