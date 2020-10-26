@@ -27,6 +27,8 @@ export const technologiesAnimation = () => {
             tl.fromTo(technologies[3], { y: -120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
             tl.fromTo(technologies[4], { y: 120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
             tl.fromTo(technologies[5], { y: -120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
+            tl.fromTo(technologies[6], { y: -120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
+            tl.fromTo(technologies[7], { y: -120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
             console.log("FDBJKBFDK")
             technologyDone = true
         }
@@ -39,6 +41,8 @@ export const technologiesAnimation = () => {
             tl.fromTo(technologies[3], { x: 120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
             tl.fromTo(technologies[4], { x: -120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
             tl.fromTo(technologies[5], { x: 120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
+            tl.fromTo(technologies[6], { x: 120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
+            tl.fromTo(technologies[7], { x: 120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
             technologyDone = true
         }
     }

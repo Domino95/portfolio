@@ -17,7 +17,6 @@
       width: 100vw;
       opacity: 0.08;
       }
-
 .naviMenu{
     height: 100px;
     width: 100px;
@@ -45,8 +44,6 @@
     animation-duration: 0.5s;
     cursor: pointer;
 }
-
-
 .arrowUp{
     height: 5px;
     width: 5px;
@@ -62,7 +59,6 @@
     animation-duration: 0.7s;
     animation-fill-mode: both;
 }
-
 .naviActive{
     display: flex;
     width: 100vw;
@@ -72,7 +68,6 @@
     position: fixed;
     z-index: 1;
     animation: 0.45s naviMenu both;
-
 }
 .navi{
     animation-duration: 1s;

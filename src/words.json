@@ -28,7 +28,11 @@
         "ERROR_MESSAGE": "Wiadomość musi zawierać od 10 do 200 znaków",
         "NO_ERROR_MESSAGE": "Pole wypełnione poprawnie",
         "MESSAGE_SEND_SUCCESFUL": "Wiadomość została wysłana",
-        "CLOSE": "ZAMKNIJ"
+        "CLOSE": "ZAMKNIJ",
+        "Paper_Rock_Scissors": "Papier Kamień Nożyce",
+        "DESCRIPTION_Paper_Rock_Scissors": "Klasyczna gra Papier Kamień Nożyce",
+        "Workout_Notebook": "Workout Notebook",
+        "DESCRIPTION_Workout_Notebook": "Aplikacja internetowa do śledzenia treningów"
     },
     "ENGLISH": {
         "LANGUAGE": "ENGLISH",
@@ -59,6 +63,10 @@
         "ERROR_MESSAGE": "Your message should consist between 10 and 200 characters",
         "NO_ERROR_MESSAGE": "Field completed correctly",
         "MESSAGE_SEND_SUCCESFUL": "Message was sent",
-        "CLOSE": "CLOSE"
+        "CLOSE": "CLOSE",
+        "Paper_Rock_Scissors": "Paper Rock Scissors",
+        "DESCRIPTION_Paper_Rock_Scissors": "Classic game Paper Rock Scissors",
+        "Workout_Notebook": "Workout Notebook",
+        "DESCRIPTION_Workout_Notebook": "Workout tracker web application"
     }
 }

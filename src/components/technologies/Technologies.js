@@ -6,6 +6,8 @@ import js from "../../icons/js.png"
 import css from "../../icons/css.png"
 import redux from "../../icons/Redux.png"
 import gsap from "../../icons/gsap.svg"
+import node from "../../icons/node.png"
+import graphql from "../../icons/graphql.png"
 import { useSelector } from "react-redux"
 const Technologies = () => {
     const words = useSelector(state => state.selectLanguage)
@@ -38,6 +40,14 @@ const Technologies = () => {
             <div className="iconContainter">
                 <img className="icon" src={gsap} alt="gsap" />
                 <div className="descriptionIcon">GSAP</div>
+            </div>
+            <div className="iconContainter">
+                <img className="icon" src={node} alt="node" />
+                <div className="descriptionIcon">Node</div>
+            </div>
+            <div className="iconContainter">
+                <img className="icon" src={graphql} alt="graphql" />
+                <div className="descriptionIcon">GraphQL</div>
             </div>
         </>
     );
