@@ -26,7 +26,7 @@ const Projects = () => {
                     <p className="description">{words.DESCRIPTION_SHIPS}</p>
                 </div>
                 <div className="wrapper" style={{ display: "flex" }}>
-                    <div className="buttonLink"><a href="https://domino95.github.io/ships/" > {words.DEMO}  </a> </div>
+                    <div className="buttonLink"><a href="https://quirky-mclean-c908ba.netlify.app" > {words.DEMO}  </a> </div>
                     <div className="buttonLink"><a href="https://github.com/Domino95/ships" > {words.CODE} </a> </div>
                 </div>
             </div >
@@ -46,7 +46,7 @@ const Projects = () => {
                     <p className="description">{words.DESCRIPTION_Paper_Rock_Scissors}</p>
                 </div>
                 <div className="wrapper" style={{ display: "flex" }}>
-                    <div className="buttonLink"><a href="https://domino95.github.io/Game_Paper_Rock_Scissors/" > {words.DEMO} </a> </div>
+                    <div className="buttonLink"><a href="https://friendly-ptolemy-39e719.netlify.app" > {words.DEMO} </a> </div>
                     <div className="buttonLink"><a href="https://github.com/Domino95/Game_Paper_Rock_Scissors" > {words.CODE} </a> </div>
                 </div>
             </div >
