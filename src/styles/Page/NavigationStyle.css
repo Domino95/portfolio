@@ -14,25 +14,13 @@ height: 80vh;
 width: 100vw;
 opacity: 0.07;
 }
-.naviMenu{
-height: 100px;
-width: 100px;
-position: fixed;
-top: -50px;
-right: -50px;
-background-color:  rgb(96, 96, 235);
-border-radius: 50%;
-padding-top: 58px;
-padding-left: 18px;
-z-index: 3;
-}
 .naviActive{
 display: block;
 width: 100vw;
 height: 100vh;
 background-color:  rgb(96, 96, 235);
 position: fixed;
-z-index: 2;
+z-index: 3;
 animation: 0.5s naviMenuMobile;
 }
 .naviIcon{
@@ -65,7 +53,6 @@ padding-left: 20px;
 z-index:2;
 animation: 0.3s showScrollMobile both;
 }
-
 .arrowUp{
 height: 5px;
 width: 5px;
@@ -76,7 +63,6 @@ padding: 5px;
 margin: 8px 0 0 3px;
 transform: rotate(-135deg);
 }
-
 .navi{
 animation: 0.3s hideNaviMenuMobile linear ;
 background-color:  rgb(96, 96, 235);
@@ -84,13 +70,62 @@ border-radius: 5px 0 0 60px;
 position: fixed;
 z-index: 1;
 }
-
 .hidden{
 animation-name: hiddenScrollMobile;
 animation-duration: 0.7s;
 animation-fill-mode: both;
 }
+.naviMenu{
+height: 100px;
+width: 100px;
+position: fixed;
+top: -50px;
+right: -50px;
+background-color:  rgb(96, 96, 235);
+border-radius: 50%;
+z-index: 3;
+display: flex;
+padding-right: 50px;
+padding-top: 67px;
+padding-left: 15px;
+cursor: pointer;
+z-index: 5;
+}
 
+.menuIcon{
+background-color: white;
+height: 4px;  
+width: 30px;
+border-radius: 2px;
+position: relative;
+transition: 0.5s;
+}
+.menuIcon::after, 
+.menuIcon::before{
+position: absolute;
+content: "";
+background-color: white;
+height: 4px;  
+width: 30px;
+border-radius: 2px;
+transition: 0.5s;
+}
+.menuIcon::after{
+transform: translateY(-8px);
+}
+.menuIcon::before{
+transform: translateY(8px);
+}
+.menuIcon.open{
+transform: translateX(-30px);
+background: transparent;
+}
+.menuIcon.open::after{
+transform:rotate(45deg) translate(15px, -15px);
+}
+.menuIcon.open::before{
+transform:rotate(-45deg)translate(15px, 15px);
+}
 
 /* LANGUGAGE SELECTION */
 
@@ -117,7 +152,6 @@ padding: 5px;
 font-size: 18px;
 letter-spacing: 1px;
 color: black;
-
 }
 
 /* LIST IN NAVIGATION */
@@ -152,16 +186,10 @@ cursor: pointer;
 .naviContainer{
 height: 55px;
 }
-.naviMenu{
-padding-top: 53px;
-padding-left: 15px;
-z-index: 2;
-}
 .naviActive{
 display: flex;
 height: 55px;
 border-radius: 5px 0 0 60px;
-z-index: 1;
 animation: 0.45s naviMenu both;
 }
 .naviIcon{
@@ -178,15 +206,13 @@ cursor: pointer;
 margin: 16px 0 0 12px;
 }
 .navi{
-animation-name: 0.5s shideNaviMenu;
+animation: 0.5s hideNaviMenu both;
 display: flex;
 width: 100vw;
 height: 55px;
 border-radius: 5px 0 0 60px;
 position: fixed;
-transform: scale(0);
 }
-
 .hidden{
 animation-name: hiddenScroll;
 animation-duration: 0.7s;
@@ -217,8 +243,8 @@ from {left: 100vw}
 to {left:0}
 }
 @keyframes hideNaviMenu{
-from {left: 0; transform: scale(1);}
-to {left:100vw; transform: scale(1);}
+from {left: 0; }
+to {left:100vw; }
 }
 @keyframes hideNaviMenuMobile{
 0% {height: 2000px;width: 2000px;top:-1000px;right:-1000px; border-radius: 50%; }

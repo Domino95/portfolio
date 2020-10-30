@@ -14,10 +14,8 @@ const Navigation = (scroll) => {
     return (
         <>
             <div id="navi" className="naviContainer">
-                <div className="naviMenu" >
-                    {navi ?
-                        <i className="naviIcon" onClick={menuHandle}>close</i> :
-                        <i className="naviIcon" onClick={menuHandle}>dehaze</i>}
+                <div className="naviMenu" onClick={menuHandle}>
+                    <div className={navi ? "menuIcon open" : "menuIcon"} />
                 </div>
                 {navi === undefined ? null :
                     navi ?
