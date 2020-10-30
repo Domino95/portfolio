@@ -9,10 +9,6 @@ import Contact from "./components/contact/Contact"
 import { animations } from "./animations/animations"
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
-window.onresize = () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
 function App() {
   const [scroll, setscroll] = useState(undefined);
 
