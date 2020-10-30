@@ -1,74 +1,63 @@
-import gsap from "gsap"
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+let animationFinished = false
+export const animations = () => {
+    if (!animationFinished) {
+        const titles = document.querySelectorAll(".titlewrapper")
+        titles.forEach(titles => {
+            gsap.fromTo(titles,
+                { y: 120, autoAlpha: 0 },
+                {
+                    y: 0, autoAlpha: 1, duration: 1, delay: 0.5, ease: "easeInOut",
+                    scrollTrigger: {
+                        trigger: titles,
+                        start: "top 120%",
+                        end: "top 80%",
+                        scrub: 1
+                    }
+                })
+        })
+        const projects = document.querySelectorAll(".projectwrapper")
+        projects.forEach(projects => {
+            gsap.fromTo(projects,
+                { y: 120, autoAlpha: 0 },
+                {
+                    y: 0, autoAlpha: 1, duration: 1, delay: 0.5, ease: "easeInOut",
+                    scrollTrigger: {
+                        trigger: projects,
+                    }
+                })
+        })
+        const contactForm = document.querySelector(".contactForm")
+        gsap.fromTo(contactForm,
+            { y: 120, autoAlpha: 0 },
+            {
+                y: 0, autoAlpha: 1, duration: 1, delay: 0.5, ease: "easeInOut",
+                scrollTrigger: {
+                    trigger: contactForm,
+                    start: "top 120% ",
 
-let setall = false
-export const setAll = () => {
-    if (!setall) {
-        const technologies = document.querySelectorAll(".iconContainter")
-        const projectsTitle = document.querySelectorAll("#projectsTitle")
-        const technologiesTitle = document.querySelectorAll("#technologies")
-        const contact = document.querySelectorAll("#contact")
-        gsap.set(technologies, { autoAlpha: 0 })
-        gsap.set(projectsTitle, { autoAlpha: 0 })
-        gsap.set(technologiesTitle, { autoAlpha: 0 })
-        gsap.set(contact, { autoAlpha: 0 })
-        setall = true
+                }
+            })
+        const technologiesList = document.querySelectorAll(".iconContainter")
+        technologiesList.forEach((item, index) => {
+            if (index % 2 === 0) {
+                gsap.fromTo(item, { y: 100, autoAlpha: 0 }, {
+                    y: 0, autoAlpha: 1, duration: 1, ease: "easeInOut", scrollTrigger: {
+                        trigger: item,
+                        start: "top: 90%",
+                    }
+                })
+            } else {
+                gsap.fromTo(item, { y: -100, autoAlpha: 0 }, {
+                    y: 0, autoAlpha: 1, duration: 1, ease: "easeInOut", scrollTrigger: {
+                        trigger: item,
+                        start: "bottom 90%",
+                    }
+                })
+            }
+        })
     }
-}
-
-let technologyDone = false
-export const technologiesAnimation = () => {
-    if (!technologyDone) {
-        if (window.innerWidth < 1124) {
-            const technologies = document.querySelectorAll(".iconContainter")
-            const tl = gsap.timeline({ eases: "linear" });
-            tl.fromTo(technologies[0], { y: 120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[1], { y: -120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[2], { y: 120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[3], { y: -120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[4], { y: 120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[5], { y: -120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[6], { y: 120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[7], { y: -120, autoAlpha: 0 }, { y: 0, autoAlpha: 1 })
-            console.log("FDBJKBFDK")
-            technologyDone = true
-        }
-        else {
-            const technologies = document.querySelectorAll(".iconContainter")
-            const tl = gsap.timeline({ eases: "power3in.Out" });
-            tl.fromTo(technologies[0], { x: -120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[1], { x: 120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[2], { x: -120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[3], { x: 120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[4], { x: -120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[5], { x: 120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[6], { x: -120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
-            tl.fromTo(technologies[7], { x: 120, autoAlpha: 0 }, { x: 0, autoAlpha: 1 })
-            technologyDone = true
-        }
-    }
-}
-
-let projectsTitle = false
-export const projectsTitleAnimation = () => {
-    if (!projectsTitle) {
-        const item = document.querySelectorAll("#projectsTitle")
-        gsap.fromTo(item, { x: -120, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 1.5, ease: "back.out(3)", delay: 0.5 })
-        projectsTitle = true
-    }
-}
-let technologiesTitle = false
-export const technologyTitleAnimation = () => {
-    if (!technologiesTitle) {
-        const item = document.querySelectorAll("#technologies")
-        gsap.fromTo(item, { x: -120, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 1.5, ease: "back.out(3)", delay: 0.5 })
-        technologiesTitle = true
-    }
-}
-let contactTitle = false
-export const contactTitleAnimation = () => {
-    if (!contactTitle) {
-        const item = document.querySelectorAll("#contact")
-        gsap.fromTo(item, { x: -120, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 1.5, ease: "back.out(3)", delay: 0.5 })
-        contactTitle = true
-    }
+    animationFinished = true
 }

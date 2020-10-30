@@ -3,6 +3,8 @@ import "../../styles/App.css"
 import "../../styles/Page/ContactStyle.css"
 import { useSelector } from "react-redux"
 import ModalSendSuccesful from './ModalSendSuccesful';
+import emailjs from 'emailjs-com'
+require('dotenv').config()
 
 const Contact = () => {
     const words = useSelector(state => state.selectLanguage)
@@ -15,8 +17,6 @@ const Contact = () => {
     const [errorMessage, setErrorMessage] = useState("")
     const [validation, setvalidation] = useState({ name: false, email: false, message: false })
 
-
-
     const handleModal = () => {
         setmodal(false)
     }
@@ -27,17 +27,16 @@ const Contact = () => {
         if (validation.name === true && validation.email === true && validation.message === true) {
             setmodal(true)
             resetForm()
-            const templateId = 'template_NSprmb0r';
-            sendFeedback(templateId, { message_html: message, from_name: name, reply_to: email })
+            const templateId = process.env.REACT_APP_templateId;
+            const userId = process.env.REACT_APP_userID;
+            sendFeedback(templateId, userId, { message_html: message, from_name: name, reply_to: email })
         }
     }
 
-    const sendFeedback = (templateId, variables) => {
-        window.emailjs.send(
-            'gmail', templateId,
-            variables
-        ).then(res => {
-        })
+    const sendFeedback = (templateId, userId, variables) => {
+        emailjs.send('gmail', templateId, variables, userId)
+            .then(res => {
+            })
             .catch(err => console.error(err))
     }
 

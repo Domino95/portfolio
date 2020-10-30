@@ -20,7 +20,6 @@ border: 2px solid rgb(96, 96, 235);
 }
 @media(min-width: 1024px){
 .modalText{
-text-align: center;
 font-size: 1.1em;
 }
 .modalFrame{

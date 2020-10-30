@@ -6,36 +6,24 @@ import Projects from "./components/projects/Projects"
 import Technologies from "./components/technologies/Technologies"
 import Footer from "./components/footer/Footer"
 import Contact from "./components/contact/Contact"
-import {
-  technologiesAnimation, projectsTitleAnimation,
-  technologyTitleAnimation, contactTitleAnimation, setAll
-} from "./animations/animations"
-
+import { animations } from "./animations/animations"
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.onresize = () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
 function App() {
   const [scroll, setscroll] = useState(undefined);
+
   useEffect(() => {
-    setAll()
+    animations()
     window.addEventListener('scroll', function () {
       const scrollY = window.scrollY;
       if (scrollY > (window.innerHeight - (window.innerHeight / 2)))
         setscroll(true)
       if (scroll !== undefined && scrollY < (window.innerHeight - (window.innerHeight / 2)))
         setscroll(false)
-      let projectsContaine = document.querySelector(".iconContainter");
-      if (projectsContaine.getBoundingClientRect().top < this.window.innerHeight) {
-        technologiesAnimation()
-      }
-      let projectsTitle = document.querySelector("#projectsTitle");
-      if (projectsTitle.getBoundingClientRect().top < this.window.innerHeight) {
-        projectsTitleAnimation()
-      }
-      let technologies = document.querySelector("#technologies");
-      if (technologies.getBoundingClientRect().top < this.window.innerHeight) {
-        technologyTitleAnimation()
-      } let contact = document.querySelector("#contact");
-      if (contact.getBoundingClientRect().top < this.window.innerHeight) {
-        contactTitleAnimation()
-      }
     });
   })
   return (
